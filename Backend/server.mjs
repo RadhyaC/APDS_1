@@ -1,12 +1,12 @@
-import http from "http";
-
-//set the port
+import express from "express";
 const PORT = 3000;
+const app = express();
 
-// start the server
-const server = http.createServer((req,res)=>{
-res.end('I am crying less because my server is working')
+app. use(express.json());
+
+app.get('/',(req, res)=>{
+    res. send('I am finally figuring this out, no more crying')
 })
 
-server. listen(PORT)
-
+// start the Express server
+app.listen(PORT);
