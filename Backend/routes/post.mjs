@@ -25,7 +25,7 @@ router.post("/upload", checkauth, async (req, res) => {
 })
 
 //update a record by id
-router.patch("/:id",checkauth, async (req, res) => {
+router.patch("/:id", checkauth, async (req, res) => {
     const query = {_id: new ObjectId(req.params.id)};
     const updates = {
         $set: {
